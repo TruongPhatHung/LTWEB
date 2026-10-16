@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhật ký phiên bản</title>
+<link rel="stylesheet" href="maint.css">
+</head>
+<body class="maint-page">
+<nav class="maint-nav">
+  <a href="index.html">Trình phát nhạc</a>
+  <a href="maintenance.html">Bảo trì &amp; Báo lỗi</a>
+  <a href="changelog.html" class="active">Nhật ký phiên bản</a>
+  <button id="changeColorBtn" class="theme-btn">Dark Mode</button>
+</nav>
+<div class="page">
+  <h1>Nhật ký phiên bản</h1>
+  <div class="timeline">
+    <div class="card">
+      <h3>v1.1.0 <span class="tag">Hoàn thiện</span></h3>
+      <ul>
+        <li>Thêm thanh điều hướng và trang Bảo trì &amp; Báo lỗi</li>
+        <li>Dark Mode lưu lựa chọn bằng localStorage</li>
+        <li>Hiển thị số phiên bản trên trang chủ</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>v1.0.1 <span class="tag">Sửa lỗi</span></h3>
+      <ul>
+        <li>Sửa lỗi JS do thiếu nút <code>#changeColorBtn</code></li>
+        <li>Xóa link CSS sai của Font Awesome, sửa icon không hiển thị</li>
+        <li>Chuyển thẻ script ra ngoài <code>.container</code></li>
+        <li>Đưa <code>@import</code> font Quicksand lên đầu <code>style.css</code> (đặt sau rule khác thì bị trình duyệt bỏ qua)</li>
+        <li>Sửa <code>@keyframes pulse</code>: <code>box-shadow: 0</code> không hợp lệ</li>
+        <li>Xóa chữ "s" thừa trong nút play, bỏ <code>float</code> vô tác dụng ở <code>.music-time</code></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>v1.0.0</h3>
+      <ul><li>Phiên bản đầu tiên: trình phát nhạc cơ bản</li></ul>
+    </div>
+  </div>
+</div>
+<script src="maint.js"></script>
+</body>
+</html>

@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
 *{
     margin: 0px;padding: 0px;box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
-
 
 body {
   margin: 0;
@@ -16,11 +16,12 @@ body {
   position: relative;
 }
 .container{
+    position: relative;
     width: 350px;
     height: 550px;
     border-radius: 20px;
-    background:#ff7f50;
-    box-shadow: 0 40px 90px #ff7f50;
+    background: #d57c10;
+    box-shadow: 0 40px 90px #1061c5;
     padding: 30px;
     overflow: hidden; 
     color:aliceblue;
@@ -92,7 +93,6 @@ body {
 
 .music-time{
     position: absolute;
-    float: left;
     right: 0;
 }
 .controls{
@@ -150,11 +150,9 @@ body {
   width: 100%;
 }
 
-
-
 @keyframes pulse{
     0%{
-        box-shadow: 0;
+        box-shadow: 0 0 0 0 #ff7f50;
     }
     50%{
         box-shadow: 0 0 0 5px #ff7f50;

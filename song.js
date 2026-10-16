@@ -28,5 +28,11 @@ let songs = [
         path:'music/SaoKhongNhinEmAuYem-DoanThuyTrang.mp3',
         artist:'Tao nè chứ ai',
         image:'images/saokonhinemauyem.jpg'
+    },
+     {
+        name:'Viên đá nhỏ',
+        path:'music/Viên Đá Nhỏ (Lofi).mp3',
+        artist:'Nguyễn Hùng',
+        image:'images/images.jpg'
     }
 ]
