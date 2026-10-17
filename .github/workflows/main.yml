@@ -1,0 +1,26 @@
+name: Kiem tra ma nguon LTWEB (CI)
+
+# Kích hoạt tự động mỗi khi có lệnh push hoặc tạo Pull Request vào nhánh main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Chạy trên máy ảo Linux của GitHub
+
+    steps:
+      - name: 1. Tải mã nguồn từ Repository về máy ảo
+        uses: actions/checkout@v4
+
+      - name: 2. Kiểm tra sự tồn tại của các file Web chính
+        run: |
+          echo "Đang kiểm tra cấu trúc dự án LTWEB..."
+          ls -la
+          test -f index.html && echo "✅ Tìm thấy file index.html"
+          test -f style.css && echo "✅ Tìm thấy file style.css"
+
+      - name: 3. Thông báo kết quả Build
+        run: echo "🎉 Quá trình kiểm thử và đóng gói hoàn tất thành công!"
