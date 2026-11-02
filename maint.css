@@ -1,0 +1,28 @@
+:root{--bg:#fcf0f8;--card:#fff;--text:#222;--muted:#666;--accent:#d63384;--line:#eadbe5}
+body.dark{--bg:#2b2b2b;--card:#383838;--text:#f1f1f1;--muted:#bbb;--accent:#ff7ab8;--line:#555}
+body.maint-page{background:var(--bg);color:var(--text);font-family:Arial,sans-serif;margin:0}
+.maint-nav{display:flex;gap:16px;align-items:center;padding:12px 20px;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.maint-nav a{color:var(--text);text-decoration:none;padding:6px 10px;border-radius:6px}
+.maint-nav a.active,.maint-nav a:hover{background:var(--accent);color:#fff}
+.theme-btn{margin-left:auto;cursor:pointer;border:1px solid var(--accent);background:none;color:var(--accent);padding:6px 12px;border-radius:6px}
+.page{max-width:900px;margin:24px auto;padding:0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:10px;background:var(--accent);color:#fff}
+.muted{color:var(--muted);font-size:14px}
+form.bug label{display:block;margin:8px 0 4px;font-weight:bold}
+form.bug input,form.bug select,form.bug textarea{width:100%;padding:8px;box-sizing:border-box;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text)}
+form.bug button,.small-btn{margin-top:12px;background:var(--accent);color:#fff;border:0;padding:8px 16px;border-radius:6px;cursor:pointer}
+.bug-item{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-top:1px solid var(--line);padding:10px 0}
+.bug-item:first-child{border-top:0}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stats div{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:8px;background:var(--bg)}
+.stats b{display:block;font-size:22px;color:var(--accent)}
+.info{text-align:center;font-size:13px;margin-top:10px}
+.timeline{border-left:3px solid var(--accent);padding-left:16px}
+.timeline h3{margin:0 0 4px}
+
+/* index.html: body là flex căn giữa, nên nav phải cố định để không bị đẩy sang cạnh */
+body:not(.maint-page) .maint-nav{position:fixed;top:0;left:0;right:0;z-index:10}
+body.dark .container{background:#333;box-shadow:0 40px 90px #000}
+.info a{color:inherit}

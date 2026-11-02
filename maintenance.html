@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảo trì phần mềm</title>
+<link rel="stylesheet" href="maint.css">
+</head>
+<body class="maint-page">
+<nav class="maint-nav">
+  <a href="index.html">Trình phát nhạc</a>
+  <a href="maintenance.html" class="active">Bảo trì &amp; Báo lỗi</a>
+  <a href="changelog.html">Nhật ký phiên bản</a>
+  <button id="changeColorBtn" class="theme-btn">Dark Mode</button>
+</nav>
+<div class="page">
+  <h1>Bảo trì phần mềm</h1>
+  <p class="muted">Bốn loại bảo trì áp dụng vào chính web phát nhạc này.</p>
+  <div class="grid">
+    <div class="card"><span class="tag">Sửa lỗi</span><h3>Corrective</h3><p>Sửa lỗi phát sinh. Ví dụ: nút đổi màu gây lỗi JS vì thiếu phần tử <code>#changeColorBtn</code>.</p></div>
+    <div class="card"><span class="tag">Thích nghi</span><h3>Adaptive</h3><p>Điều chỉnh theo môi trường mới. Ví dụ: hiển thị tốt trên điện thoại, trình duyệt mới.</p></div>
+    <div class="card"><span class="tag">Hoàn thiện</span><h3>Perfective</h3><p>Thêm chức năng, cải thiện trải nghiệm. Ví dụ: Dark Mode nhớ lựa chọn người dùng.</p></div>
+    <div class="card"><span class="tag">Phòng ngừa</span><h3>Preventive</h3><p>Làm code dễ bảo trì hơn. Ví dụ: tách file JS/CSS, thêm try/catch, ghi nhật ký phiên bản.</p></div>
+  </div>
+
+  <div class="card">
+    <h2>Gửi yêu cầu bảo trì</h2>
+    <form class="bug" id="bugForm">
+      <label for="title">Tiêu đề</label><input id="title" name="title" required maxlength="100">
+      <label for="type">Loại bảo trì</label>
+      <select id="type" name="type"><option>Sửa lỗi</option><option>Thích nghi</option><option>Hoàn thiện</option><option>Phòng ngừa</option></select>
+      <label for="severity">Mức độ</label>
+      <select id="severity" name="severity"><option>Thấp</option><option selected>Trung bình</option><option>Cao</option></select>
+      <label for="desc">Mô tả</label><textarea id="desc" name="desc" rows="3" required></textarea>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+
+  <div class="card"><h2>Thống kê</h2><div class="stats" id="bugStats"></div></div>
+  <div class="card"><h2>Danh sách yêu cầu</h2><div id="bugList"></div></div>
+</div>
+<script src="maint.js"></script>
+</body>
+</html>
